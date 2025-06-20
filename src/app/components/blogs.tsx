@@ -7,7 +7,7 @@ export default function Blogs() {
   const [hovered, setHovered] = useState<number | null>(0); // default to first tab
 
   return (
-    <div className="w-screen flex flex-col items-center px-2 py-4 ">
+    <div className="w-screen flex flex-col items-center px-2  -mt-22 ">
       <div className="hidden sm:block w-1/2 relative p-1 overflow-hidden text-sm text-center ">
         {/* Sliding background that follows hover without reset */}
         <div

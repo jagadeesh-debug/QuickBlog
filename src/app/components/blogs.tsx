@@ -8,10 +8,10 @@ export default function Blogs() {
 
   return (
     <div className="w-screen flex flex-col items-center px-2 py-4 ">
-      <div className="w-1/2 relative  rounded-lg p-1 overflow-hidden text-sm text-center ">
+      <div className="hidden sm:block w-1/2 relative p-1 overflow-hidden text-sm text-center ">
         {/* Sliding background that follows hover without reset */}
         <div
-          className="absolute  h-8 bg-[#5044E5] rounded-md z-0 transition-all duration-300 ease-in-out"
+          className="absolute  h-8 bg-[#5044E5] rounded-full z-0 transition-all duration-300 ease-in-out"
           style={{
             width: `${100 / tabs.length}%`,
             left: `${(100 / tabs.length) * (hovered ?? 0)}%`,
@@ -25,7 +25,7 @@ export default function Blogs() {
               key={idx}
               onMouseEnter={() => setHovered(idx)}
               onMouseLeave={() => setHovered(null)}
-              className={`w-1/6 py-2 text-center cursor-pointer transition-all duration-300 rounded-md ${
+              className={`w-1/6 py-2 text-center cursor-pointer transition-all duration-300 ${
                 hovered === idx ? 'text-white' : 'text-black hover:text-[#5044E5]'
               }`}
             >

@@ -1,38 +1,38 @@
 export default function Footer() {
     return (
-        <div className="w-screen flex flex-col">
-            <div className="w-screen flex justify-around">
+        <div className="w-screen flex flex-col font-thin bg-gray-100">
+            <div className="w-screen flex flex-col  md:flex-row justify-around">
                 <div className="footer1 flex flex-col">
-                    <h1 className="text-xl">QuickBlog</h1>
-                    <div className=" text-balance w-2/3">
+                    <h1 className="text-sm font-bold md:font-thin md:text-xl">QuickBlog</h1>
+                    <div className=" text-[12px] md:text-3md text-balance w-2/3">
                         a blog based on userfriendly approach and integrated with ai for better experince and workflow
                     </div>
                 </div>
                 {/* quickLinks */}
                 <div className="flex flex-col">
-                    <h1 className="text-xl">QucikLinks</h1>
-                    <h2 className="text-sm">Home</h2>
-                    <h2 className="text-sm">Best Sellers</h2>
-                    <h2 className="text-sm">Offers</h2>
-                    <h2 className="text-sm">contact us</h2>
-                    <h2 className="text-sm">FAQs</h2>
+                    <h1 className="text-sm font-bold md:font-thin md:text-xl">QucikLinks</h1>
+                    <h2 className="text-[12px] md:text-[13px]">Home</h2>
+                    <h2 className="text-[12px] md:text-[13px]">Best Sellers</h2>
+                    <h2 className="text-[12px] md:text-[13px]">Offers</h2>
+                    <h2 className="text-[12px] md:text-[13px]">contact us</h2> 
+                    <h2 className="text-[12px] md:text-[13px]">FAQs</h2>
                 </div>
                 {/* need info */}
                 <div className="flex flex-col">
-                    <h1 className="text-xl">Need help?</h1>
-                    <h2 className="text-sm">Delivery Information</h2>
-                    <h2 className="text-sm">Return & refund policy</h2>
-                    <h2 className="text-sm">payment Methods</h2>
-                    <h2 className="text-sm">Track Your Order</h2>
-                    <h2 className="text-sm">Contact us</h2>
+                    <h1 className="font-bold md:font-thin text-sm md:text-xl">Need help?</h1>
+                    <h2 className="text-[12px] md:text-[13px]">Delivery Information</h2>
+                    <h2 className="text-[12px] md:text-[13px]">Return & refund policy</h2>
+                    <h2 className="text-[12px] md:text-[13px]">payment Methods</h2>
+                    <h2 className="text-[12px] md:text-[13px]">Track Your Order</h2>
+                    <h2 className="text-[12px] md:text-[13px]">Contact us</h2>
                 </div>
                 {/* social media handles */}
                 <div className="flex flex-col">
-                    <h1 className="text-xl">Follow us</h1>
-                    <h2 className="text-sm">Instagram</h2>
-                    <h2 className="text-sm">Twitter</h2>
-                    <h2 className="text-sm">Facebook</h2>
-                    <h2 className="text-sm">YouTube</h2>
+                    <h1 className="font-bold md:font-thin text-sm md:text-xl">Follow us</h1>
+                    <h2 className="text-[12px] md:text-[13px]">Instagram</h2>
+                    <h2 className="text-[12px] md:text-[13px]">Twitter</h2>
+                    <h2 className="text-[12px] md:text-[13px]">Facebook</h2>
+                    <h2 className="text-[12px] md:text-[13px]">YouTube</h2>
                 </div>
             </div>
             <div className="flex w-screen h border border-black"></div>

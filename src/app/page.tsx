@@ -6,15 +6,17 @@ import BlogTop from "./components/blogTop";
 import Entry from "./components/Entry";
 import Footer from "./components/footer";
 import AuthTabs from "./Authentication/Auth";
+import Profile from "./components/profile";
 
 export default function Home() {
   return (
     <div >
       {/* <BlogTop/>
       <Entry/>
-      <Blogs/>  
+      <Blogs />  
       <Footer/> */}
-      <AuthTabs/>
+      {/* <AuthTabs/> */}
+      <Profile/>
     </div>
   );
 }

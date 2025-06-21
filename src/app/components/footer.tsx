@@ -1,7 +1,7 @@
 export default function Footer() {
     return (
-        <div className="w-screen flex flex-col font-thin bg-gray-100">
-            <div className="w-screen flex flex-col  md:flex-row justify-around">
+        <div className=" flex flex-col font-thin bg-gray-100">
+            <div className=" flex flex-col  md:flex-row justify-between p-2">
                 <div className="footer1 flex flex-col">
                     <h1 className="text-sm font-bold md:font-thin md:text-xl">QuickBlog</h1>
                     <div className=" text-[12px] md:text-3md text-balance w-2/3">
@@ -35,7 +35,7 @@ export default function Footer() {
                     <h2 className="text-[12px] md:text-[13px]">YouTube</h2>
                 </div>
             </div>
-            <div className="flex w-screen h border border-black"></div>
+            <div className="flex  h border border-gray-400"></div>
             <div className="text-sm text-center">Copyright 2025 QuickBlog all rights Reserved</div>
         </div>
     )

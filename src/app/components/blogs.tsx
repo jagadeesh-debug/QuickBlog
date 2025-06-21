@@ -7,8 +7,8 @@ export default function Blogs() {
   const [hovered, setHovered] = useState<number | null>(0); // default to first tab
 
   return (
-    <div className="w-screen flex flex-col items-center px-2  -mt-22 ">
-      <div className="hidden sm:block w-1/2 relative p-1 overflow-hidden text-sm text-center ">
+    <div className=" flex flex-col items-center px-2  -mt-22  ">
+      <div className="hidden sm:block w-1/2 relative p-1 overflow-hidden text-sm text-center fixed">
         {/* Sliding background that follows hover without reset */}
         <div
           className="absolute  h-8 bg-[#5044E5] rounded-full z-0 transition-all duration-300 ease-in-out"
@@ -36,7 +36,8 @@ export default function Blogs() {
       </div>
 
       {/* Blog section placeholder */}
-      <div className="w-full flex justify-center mt-6">
+      <div className="w-full flex justify-center mt-12 sm:mt-6 h-screen border bg-green-400">
+
       </div>
     </div>
   );

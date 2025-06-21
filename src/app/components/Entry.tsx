@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button"
 export default function Entry(){
     return (
-        <div className="flex flex-col  w-screen  items-center   bg-[url('/assets/bg.png')] bg-center  bg-no-repeat bg-[length:600px] p-12 sm:bg-[length:800px] sm:p-32" >
+        <div className="flex flex-col    items-center   bg-[url('/assets/bg.png')] bg-center  bg-no-repeat bg-[length:600px] p-12 sm:bg-[length:800px] sm:p-32" >
             {/* title space */}
             <div className=" sm:w-1/2  md:w-full flex flex-col font-bold text-center  px-2 pt-12 sm:py-4  ">
                 <h1 className="text-xl sm:text-3xl">Your own <span className="text-[#5044E5]">blogging </span></h1>

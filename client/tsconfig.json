@@ -33,6 +33,7 @@
     "**/*.tsx",
     "client/.next/types/**/*.ts",
     "client/next-env.d.ts",
+    "node_modules/.bin/.next/types/**/*.ts",
     ".next/types/**/*.ts"
   ],
   "exclude": [

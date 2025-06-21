@@ -9,7 +9,7 @@ import AuthTabs from "./Authentication/Auth";
 
 export default function Home() {
   return (
-    <div className="">
+    <div >
       {/* <BlogTop/>
       <Entry/>
       <Blogs/>  

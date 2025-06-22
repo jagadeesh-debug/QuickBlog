@@ -1,13 +1,11 @@
 import { Tabs } from "@radix-ui/react-tabs";
-import Login from "./Authentication/login";
-import SignUp from "./Authentication/signup";
-import Blogs from "./components/blogs";
-import BlogTop from "./components/blogTop";
-import Entry from "./components/Entry";
-import Footer from "./components/footer";
-import AuthTabs from "./Authentication/Auth";
-import Profile from "./components/profile";
-import { CreatePost } from "./components/createPost";
+import Login from "./Authentication/Login/page";
+import Blogs from "./components/blogs/page";
+import BlogTop from "./components/blogTop/page";
+import Footer from "./components/footer/page";
+import AuthTabs from "./Authentication/Auth/page";
+import Entry from "./components/Entry/page";
+import { CreatePost } from "./components/createPost/page";
 
 export default function Home() {
   return (
@@ -17,7 +15,6 @@ export default function Home() {
       <Blogs />  
       <Footer/>
       {/* <AuthTabs/>
-      <Profile/>
       <CreatePost/> */}
     </div>
   );

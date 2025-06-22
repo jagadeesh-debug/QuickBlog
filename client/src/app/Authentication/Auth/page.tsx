@@ -1,6 +1,6 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../components/ui/tabs"
-import Login from "./login";
-import SignUp from "./signup";   
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../../components/ui/tabs"
+import Login from "../Login/page";
+import SignUp from "../signup/page";   
 
 export default function AuthTabs() {
   return (

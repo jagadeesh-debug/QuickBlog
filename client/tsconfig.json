@@ -35,7 +35,7 @@
     "client/next-env.d.ts",
     "node_modules/.bin/.next/types/**/*.ts",
     ".next/types/**/*.ts"
-  ],
+, "src/app/store/authslice.ts"  ],
   "exclude": [
     "node_modules"
   ]

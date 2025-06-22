@@ -11,9 +11,9 @@ export default function BlogTop() {
     setIsLoggedIn(!!token);
   }, []);
 
-  const handleLogin = () => router.push("/login");
-  const handleProfile = () => router.push("/profile");
-  const handleCreate = () => router.push("/create-post");
+  const handleLogin = () => router.push("../../Authentication/Auth");
+  const handleProfile = () => router.push("components/profile");
+  const handleCreate = () => router.push("components/createPost");
 
   return (
     <div className="flex justify-between p-2 items-center">

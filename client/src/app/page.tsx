@@ -12,12 +12,12 @@ import { CreatePost } from "./components/createPost";
 export default function Home() {
   return (
     <div >
-      {/* <BlogTop/>
+      <BlogTop/>
       <Entry/>
       <Blogs />  
-      <Footer/> */}
-      <AuthTabs/>
-      {/* <Profile/>
+      <Footer/>
+      {/* <AuthTabs/>
+      <Profile/>
       <CreatePost/> */}
     </div>
   );

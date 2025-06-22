@@ -12,11 +12,7 @@ export default function Profile() {
     <div className="w-full bg-[url('/assets/bg.png')] bg-center bg-no-repeat bg-[length:600px] sm:bg-[length:1000px] p-12   sm:p-32 flex justify-center ">
       <Card className="w-full max-w-md p-6">
         <CardHeader className="flex flex-col items-center">
-          <img
-            src="https://via.placeholder.com/100"
-            alt="Profile"
-            className="w-24 h-24 rounded-full object-cover mb-4 border"
-          />
+         
           <CardTitle className="text-center text-xl">John Doe</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
@@ -28,8 +24,11 @@ export default function Profile() {
             <Label className="text-muted-foreground">Email</Label>
             <p className="font-medium">johndoe@example.com</p>
           </div>
-          <div className="pt-6">
-            <Button className="w-full cursor-pointer">Edit Profile</Button>
+          <div className="pt-1">
+            <Button className="w-full cursor-pointer bg-[#5044E5]">Edit Profile</Button>
+          </div>
+            <div className="pt-1">
+            <Button className="w-full cursor-pointer bg-[#5044E5]">Log Out</Button>
           </div>
         </CardContent>
       </Card>

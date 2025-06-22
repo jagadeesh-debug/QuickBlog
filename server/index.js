@@ -19,5 +19,4 @@ app.use(express.json()) //parses incoming  json req
 connectDB()
 app.use("/api/auth",authRoutes)
 app.use("/api/posts",ProtectedRoutes)
-const PORT = process.env.PORT || 5000
-app.listen(PORT,()=>console.log(`server running on the port ${PORT}`))
+modules.exports = app;

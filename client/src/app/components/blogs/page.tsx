@@ -55,12 +55,8 @@ export default function Blogs() {
 
         // Initialize slidingTags with first 4 tags or less
         setSlidingTags(uniqueTags.slice(0, 4));
-      } catch (error) {
-        if (axios.isAxiosError(error)) {
-          console.error('Axios error fetching posts:', error.message, error.response?.data);
-        } else {
-          console.error('Unknown error fetching posts:', error);
-        }
+      } catch (err: unknown) {
+        console.error('Error fetching posts:', err);
       }
     };
 

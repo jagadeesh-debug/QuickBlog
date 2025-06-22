@@ -19,9 +19,4 @@ app.use(express.json()) //parses incoming  json req
 connectDB()
 app.use("/api/auth",authRoutes)
 app.use("/api/posts",ProtectedRoutes)
-app.get('/', function (req, res) {
-    res.send({
-        message: "working"
-    });
-});
 module.exports=app

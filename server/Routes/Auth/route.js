@@ -39,7 +39,8 @@ router.post("/login", async (req, res) => {
     if (!isMatch) {
       return res.status(401).json({ message: "Wrong Password" });
     }
-
+    
+    console.log("JWT_KEY used for signing:", process.env.JWT_KEY);
     const token = jwt.sign(
       { id: existingUser._id },
       process.env.JWT_KEY,

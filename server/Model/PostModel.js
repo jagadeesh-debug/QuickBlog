@@ -6,7 +6,7 @@ const PostSchema = new mongoose.Schema({
     },
     backgroundImage: {
         type: String,
-        required: true,
+      
     },
     tags: {
         type: [String],

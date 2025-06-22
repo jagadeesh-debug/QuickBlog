@@ -1,5 +1,4 @@
 // import bg from "../../../public/assets/bg.png"
-import { Button } from "../../components/ui/button"
 export default function Entry(){
     return (
         <div className="flex flex-col    items-center   bg-[url('/assets/bg.png')] bg-center  bg-no-repeat bg-[length:600px] p-12 sm:bg-[length:800px] sm:p-52" >

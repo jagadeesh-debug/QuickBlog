@@ -8,7 +8,6 @@ import axios from "axios";
 import { loginSuccess } from "@/app/store/authslice";
 import { AppDispatch } from "@/app/store/store";
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../../components/ui/tabs";
 import { Button } from "../../../components/ui/button";
 import {
   Card,
@@ -50,10 +49,12 @@ export default function SignUp() {
       });
 
       // 2. If registration successful, log the user in
+      console.log(registerResponse)
       const loginResponse = await axios.post("https://quick-blog-chi.vercel.app/api/auth/login", {
         email,
         password,
       });
+    
 
       const { token } = loginResponse.data;
       
@@ -73,12 +74,13 @@ export default function SignUp() {
       // 5. Redirect to home page
       router.push("/");
       
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error("Signup error:", error);
-      setErrorMsg(
-        error.response?.data?.message || 
-        "Failed to create account. Please try again."
-      );
+      if (axios.isAxiosError(error) && error.response?.data?.message) {
+        setErrorMsg(error.response.data.message);
+      } else {
+        setErrorMsg("Failed to create account. Please try again.");
+      }
     } finally {
       setLoading(false);
     }

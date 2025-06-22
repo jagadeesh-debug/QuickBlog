@@ -4,7 +4,6 @@ import { useState, FormEvent } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { useRouter } from "next/navigation";
-
 import { loginSuccess } from "@/app/store/authslice";
 import { AppDispatch } from "@/app/store/store";
 
@@ -65,8 +64,9 @@ export default function Login() {
         
         setSuccessMsg("Login successful!");
         router.push("/");
-      } catch (userError) {
+      } catch (userError: unknown) {
         // If we can't get user data, still login with basic info
+        console.log(userError)
         dispatch(loginSuccess({
           token,
           user: {
@@ -76,8 +76,12 @@ export default function Login() {
         }));
         router.push("/");
       }
-    } catch (error: any) {
-      setErrorMsg(error.response?.data?.message || "Login failed");
+    } catch (error: unknown) {
+      if (axios.isAxiosError(error) && error.response?.data?.message) {
+        setErrorMsg(error.response.data.message);
+      } else {
+        setErrorMsg("Login failed");
+      }
     }
   };
 

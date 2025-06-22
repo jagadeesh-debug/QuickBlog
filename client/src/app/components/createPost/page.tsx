@@ -2,12 +2,10 @@
 
 import { useState, FormEvent } from "react";
 import axios from "axios";
-
 import { Button } from "../../../components/ui/button";
 import {
   Card,
   CardContent,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "../../../components/ui/card";
@@ -52,15 +50,20 @@ export default function CreatePost() {
           },
         }
       );
-
+      console.log(res)
+      console.log(image)
       setSuccessMsg("Post created successfully!");
       setTitle("");
       setContent("");
       setTags("");
       setImage(null);
-    } catch (err: any) {
-      setErrorMsg(err.response?.data?.message || "Failed to create post");
-    }
+    } catch (err: unknown) {
+  if (axios.isAxiosError(err)) {
+    setErrorMsg(err.response?.data?.message || "Failed to create post");
+  } else {
+    setErrorMsg("Failed to create post");
+  }
+}
   };
 
   return (

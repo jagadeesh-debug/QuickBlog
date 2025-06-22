@@ -17,7 +17,7 @@ type BlogCardProps = {
   description: string;
 };
 
-export function BlogCard(props: BlogCardProps) {
+export default function BlogCard(props: BlogCardProps) {
   const { title, author, date, tags, image, description } = props;
 
   return (
@@ -40,11 +40,13 @@ export function BlogCard(props: BlogCardProps) {
         <CardDescription>
           Created by <span className="font-semibold">{author}</span> ·{" "}
           <span className="text-muted-foreground text-sm">{date}</span>
+          {/* Truncated description inside card */}
+          <p className="mt-2 text-gray-700 line-clamp-1">{description}</p>
         </CardDescription>
       </CardHeader>
 
       <CardContent>
-        <p>{description}</p>
+        {/* You can add more if needed */}
       </CardContent>
     </Card>
   );

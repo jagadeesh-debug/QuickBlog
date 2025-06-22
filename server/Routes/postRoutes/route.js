@@ -1,4 +1,6 @@
 const Post = require("../../Model/PostModel");
+require('dotenv').config()
+
 
 const createPost = async (req, res) => {
    console.log("CreatePost controller hit");

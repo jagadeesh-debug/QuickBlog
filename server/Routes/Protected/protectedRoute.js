@@ -1,6 +1,7 @@
 const express = require("express")
 const verifyToken = require("../../MiddleWare/verifytoken")
 const {createPost , getAllposts, updatePost, DeletePost} = require("./../postRoutes/route")
+require('dotenv').config()
 
 const router = express.Router()
 

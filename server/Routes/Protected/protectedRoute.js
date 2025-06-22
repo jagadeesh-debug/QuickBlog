@@ -5,9 +5,9 @@ require('dotenv').config()
 
 const router = express.Router()
 
-router.post("/",verifyToken,createPost)
+router.post("/create",verifyToken,createPost)
 router.put("/:id",verifyToken,updatePost)
 router.delete("/:id",verifyToken,DeletePost)
-router.get("/",getAllposts)
+router.get("/read",getAllposts)
 
 module.exports=router

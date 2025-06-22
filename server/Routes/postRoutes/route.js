@@ -3,19 +3,44 @@ require('dotenv').config()
 
 
 const createPost = async (req, res) => {
-   console.log("CreatePost controller hit");
-  console.log("req.userId:", req.userId);
-  console.log("req.body:", req.body);
-  try {
-    const post = new Post({
+  try {  
+    const { title, content } = req.body;
+    if (!title || !content) {
+      return res.status(400).json({ message: "Title and content are required fields" });
+    }
+    
+    const postData = {
       ...req.body,
       user: req.userId,
+    };
+    
+    if (typeof req.body.tags === 'string' && req.body.tags.trim()) {
+      postData.tags = req.body.tags.split(',').map(tag => tag.trim());
+    }
+    
+    const post = new Post(postData);
+    const savedPost = await post.save();
+    
+    return res.status(201).json({ 
+      success: true,
+      message: "Post created successfully", 
+      id: savedPost._id,
+      post: savedPost 
     });
-    await post.save();
-   return  res.status(200).json({ message: "Created Successfully", post });
   } catch (err) {
-    console.error(err);
-   return  res.status(500).json({ message: "Server Error" });
+    console.error("Post creation error details:", err);
+    
+    if (err.name === 'ValidationError') {
+      return res.status(400).json({ 
+        message: "Validation error", 
+        errors: Object.values(err.errors).map(e => e.message)
+      });
+    }
+    
+    return res.status(500).json({ 
+      message: "Server Error", 
+      error: err.message 
+    });
   }
 };
 

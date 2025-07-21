@@ -32,7 +32,10 @@ export default function Myblogs() {
   const [myBlogs, setMyBlogs] = useState<Post[]>([]);
   const [selectPost, popSelectPost] = useState<Post | null>(null);
 
+
+
   useEffect(() => {
+
     const fetchMyPosts = async () => {
       try {
         const res = await axios.get('https://quick-blog-chi.vercel.app/api/posts/mine', {
@@ -62,14 +65,15 @@ export default function Myblogs() {
 
   const open = (post: Post) => {
     popSelectPost(post)
+    
   }
   const close = () => {
     popSelectPost(null)
   }
 
-  const update =(post:Post)=>{
+  // const update = (post: Post) => {
 
-  }
+  // }
   return (
     <div>
       <BlogTop />
@@ -83,7 +87,7 @@ export default function Myblogs() {
             {myBlogs.map(blog => (
               <div
                 key={blog._id}
-                onClick={() =>  open(blog)}
+                onClick={() => open(blog)}
                 className="cursor-pointer">
                 <BlogCard
                   key={blog._id}
@@ -114,13 +118,19 @@ export default function Myblogs() {
               {/* tags */}
 
               {/* details and buttons */}
+
+              
+
+
+
+
               <h2 className="text-3xl font-bold mt-4">{selectPost.title}</h2>
               <p className="mt-6 whitespace-pre-line text-gray-800 ">{selectPost.description}</p>
               <div className="flex gap-2 mt-2">
-                  <button  className="bg-[#5044E5] rounded-md w-24 h-8 text-white  cursor-pointer ">Update</button>
-                  <button onClick={close} className="bg-[#5044E5] rounded-md w-24 h-8 text-white  cursor-pointer ">Close</button>
-                </div>
-            
+                <button  className="bg-[#5044E5] rounded-md w-24 h-8 text-white  cursor-pointer ">Edit</button>
+                <button onClick={close} className="bg-[#5044E5] rounded-md w-24 h-8 text-white  cursor-pointer ">Close</button>
+              </div>
+
             </div>
           </div>
         )}

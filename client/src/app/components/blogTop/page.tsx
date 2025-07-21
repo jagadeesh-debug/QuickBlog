@@ -12,7 +12,7 @@ export default function BlogTop() {
   }, []);
   const home =()=>router.push('/');
   const handleLogin = () => router.push("../../Authentication/Auth");
-  const handleProfile = () => router.push("../profile");
+  const handleProfile = () => router.push("../components/profile");
   const handleCreate = () => router.push("../components/createPost");
   const handleBlogs = () =>router.push("../components/myblogs");
 

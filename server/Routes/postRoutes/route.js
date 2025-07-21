@@ -81,4 +81,14 @@ const DeletePost = async(req,res)=>{
     return res.status(500).json({ message: "Server error" });
   }
 }
-module.exports = { createPost, getAllposts , updatePost , DeletePost };
+//get my posts
+const getMyPosts = async (req, res) => {
+  try {
+    const posts = await Post.find({ user: req.userId }).populate('user');
+    return res.status(200).json({ message: "User's posts fetched", posts });
+  } catch (err) {
+    return res.status(500).json({ message: "Server Error", error: err.message });
+  }
+};
+
+module.exports = { createPost, getAllposts , updatePost , DeletePost ,  getMyPosts  };

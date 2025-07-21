@@ -81,7 +81,7 @@ export default function Myblogs() {
         <h2 className="text-3xl font-bold mb-6 text-center sm:text-left">My Posts</h2>
 
         {myBlogs.length === 0 ? (
-          <p className="text-center text-gray-500">You haven't created any posts yet.</p>
+          <p className="text-center text-gray-500">You haven&apos;t created any posts yet.</p>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" >
             {myBlogs.map(blog => (

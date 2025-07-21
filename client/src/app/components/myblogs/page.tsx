@@ -34,7 +34,6 @@ export default function Myblogs() {
   const [isEditing, setEditing] = useState(false);
   const [editTitle, setTitle] = useState("");
   const [editDescription, setDescription] = useState("");
-
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 6;
 
@@ -81,7 +80,22 @@ export default function Myblogs() {
   const close = () => {
     popSelectPost(null);
   };
+ const deletePost = async () => {
+    if (!selectPost) return;
+    try {
+      await axios.delete(`https://quick-blog-chi.vercel.app/api/posts/${selectPost._id}`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token") || ""}`,
+        },
+      });
 
+      const updatedPosts = myBlogs.filter(post => post._id !== selectPost._id);
+      setMyBlogs(updatedPosts);
+      close();
+    } catch (error) {
+      console.error("Failed to delete post:", error);
+    }
+  };
   const saveUpdate = async () => {
     if (!selectPost) return;
     try {
@@ -217,6 +231,10 @@ export default function Myblogs() {
                       className="bg-[#5044E5] rounded-md w-24 h-8 text-white cursor-pointer"
                     >
                       Close
+                    </button>
+                    <button
+                    onClick={deletePost}
+                      className="bg-red-600 rounded-md w-24 h-8 text-white cursor-pointer" >Delete
                     </button>
                   </div>
                 </div>

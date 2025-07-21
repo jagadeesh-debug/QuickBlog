@@ -34,7 +34,7 @@ export default function Blogs() {
   const [selectedPost, setSelectedPost] = useState<Post | null>(null);
   const [slidingTags, setSlidingTags] = useState<string[]>([]); // max 4 tags here
   const blogsPerPage = 6;
-
+  
   useEffect(() => {
     const fetchPosts = async () => {
       try {
@@ -114,6 +114,9 @@ export default function Blogs() {
     setSelectedPost(null);
   };
 
+  const update =()=>{
+    
+  }
   return (
     <div className="flex flex-col items-center px-2 -mt-22">
       {/* Tabs */}
@@ -164,6 +167,7 @@ export default function Blogs() {
                 tags={blog.tags}
                 date={blog.date}
                 author={blog.author}
+                showMeta={true}
               />
             </div>
           ))}
@@ -231,7 +235,7 @@ export default function Blogs() {
 
             <button
               onClick={closePopup}
-              className="mt-6 px-6 py-2 bg-[#5044E5] text-white rounded hover:bg-[#4237c4]"
+              className="mt-6 px-6 py-2 bg-[#5044E5] text-white rounded hover:bg-[#4237c4] cursor-pointer"
             >
               Close
             </button>

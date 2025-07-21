@@ -53,6 +53,7 @@ export default function CreatePost() {
       console.log(res)
       console.log(image)
       setSuccessMsg("Post created successfully!");
+      window.location.href = "../components/myblogs";
       setTitle("");
       setContent("");
       setTags("");

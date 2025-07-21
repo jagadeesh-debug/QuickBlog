@@ -114,9 +114,7 @@ export default function Blogs() {
     setSelectedPost(null);
   };
 
-  const update =()=>{
-    
-  }
+
   return (
     <div className="flex flex-col items-center px-2 -mt-22">
       {/* Tabs */}
@@ -149,7 +147,7 @@ export default function Blogs() {
       </div>
 
       {/* Blog Section */}
-      <div className="w-full mt-24 px-4 max-w-6xl">
+      <div className  ="w-full mt-24 px-4 max-w-6xl">
         <h2 className="text-3xl font-bold mb-6 text-center sm:text-left">Posts</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -203,7 +201,7 @@ export default function Blogs() {
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="bg-white rounded-lg shadow-xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6"
+            className="bg- rounded-lg shadow-xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6"
           >
             {/* Image */}
             <div

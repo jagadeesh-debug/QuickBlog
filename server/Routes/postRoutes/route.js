@@ -90,7 +90,7 @@ const getMyPosts = async (req, res) => {
     return res.status(500).json({ message: "Server Error", error: err.message });
   }
 };
-
+//search posts
 const SearchPost = async(req,res)=>{
   
     const {q}= req.query;
@@ -106,4 +106,4 @@ const SearchPost = async(req,res)=>{
       return res.status(500).json({error:"Server Error"});
     }
 }
-module.exports = { createPost, getAllposts , updatePost , DeletePost ,  getMyPosts  };
+module.exports = { createPost, getAllposts , updatePost , DeletePost ,  getMyPosts  , SearchPost};

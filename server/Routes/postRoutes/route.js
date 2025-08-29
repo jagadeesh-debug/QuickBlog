@@ -91,4 +91,19 @@ const getMyPosts = async (req, res) => {
   }
 };
 
+const SearchPost = async(req,res)=>{
+  
+    const {q}= req.query;
+    if(!q)  
+      return res.status(400).json({error:"please enter any thing to proceed search"})
+    try{
+          const post = await Post.find({
+            title:{$regex:q , $options:"i" },
+          })
+          res.status(200).json(post)
+    }
+    catch(err){
+      return res.status(500).json({error:"Server Error"});
+    }
+}
 module.exports = { createPost, getAllposts , updatePost , DeletePost ,  getMyPosts  };

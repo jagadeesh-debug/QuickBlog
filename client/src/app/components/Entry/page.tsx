@@ -26,7 +26,7 @@ export default function Entry(){
             </div>
             {/* caption space */}
             <div className="flex text-wrap sm:px-2 py-4  sm:w-1/2 md:w-1/2 lg:w-1/3  text-center">
-            <h3 className="text-[12px] text-gray">This is your space to think out loud, to share what matters, and to write without f'ilters. Whether it's one word or a thousand, your story starts right here </h3>
+            <h3 className="text-[12px] text-gray">This is your space to think out loud, to share what matters, and to write without filters. Whether it&apos;s one word or a thousand, your story starts right here </h3>
             </div>
             {/* search blogs */}
             {/* <div className=" flex border border-gray-300  h-12 sm:w-1/2  justify-between md:px-2 py-1 sm:py-1  rounded-md">

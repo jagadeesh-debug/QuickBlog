@@ -1,22 +1,22 @@
 
 "use client"
-import { useState } from "react"
+// import { useState } from "react"
 
-type prop={
-    title:string
-}
+// type prop={
+//     title:string
+// }
 export default function Entry(){
     
 
-    const [q,setQ] = useState("")
-    const [result,setResult] = useState([])
+    // const [q,setQ] = useState("")
+    // const [result,setResult] = useState([])
 
-    const handleSearch = async ()=>{
-        if(!q.trim()) return 
-        const res = await fetch("https://quick-blog-chi.vercel.app/api/posts/search")
-        const data = await res.json();
-        setResult(data);
-    }
+    // const handleSearch = async ()=>{
+    //     if(!q.trim()) return 
+    //     const res = await fetch("https://quick-blog-chi.vercel.app/api/posts/search")
+    //     const data = await res.json();
+    //     setResult(data);
+    // }
     return (
         <div className="flex flex-col  items-center   bg-[url('/assets/bg.png')] bg-center  bg-no-repeat bg-[length:600px] p-12 sm:bg-[length:800px] sm:p-52" >
             {/* title space */}

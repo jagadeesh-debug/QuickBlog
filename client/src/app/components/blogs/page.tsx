@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import BlogCard from '../blogCard/Blogcard';
 import axios from 'axios';
+import Entry from '../Entry/page';
 
 type Post = {
   _id: string;
@@ -117,6 +118,7 @@ export default function Blogs() {
 
   return (
     <div className="flex flex-col items-center px-2 -mt-22">
+        <Entry/>
       {/* Tabs */}
       <div className="hidden sm:block w-full max-w-3xl relative p-1 overflow-x-auto overflow-y-hidden whitespace-nowrap text-sm text-center fixed z-50 bg-white">
         <div
